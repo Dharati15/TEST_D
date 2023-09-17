@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .bold {
+            font-weight: bold;
+        }
+        
+    </style>
+</head>
+<body>
+    <input type="text" id="inputValue">
+    <button id="addToList">Add to List</button>
+    <button id="toggleBold">Toggle Bold</button>
+    <ul id="list"></ul>
+    
+    <script>
+        const enterinputValue = document.getElementById('inputValue');
+        const addinlist = document.getElementById('addToList');
+        const list = document.getElementById('list');
+        const boldtext = document.getElementById('toggleBold');
+
+        
+        addinlist.addEventListener('click', () => {
+            const value = enterinputValue.value; 
+            
+            if (value !== '') {
+                const listItem = document.createElement('li'); 
+                listItem.textContent = value; 
+                list.appendChild(listItem); 
+                enterinputValue.value = ''; 
+            }
+        });
+
+        boldtext.addEventListener('click', () => {
+            const listItems = list.querySelectorAll('li'); 
+               listItems.forEach(item => {
+                item.classList.toggle('bold'); 
+            });
+        });
+    </script>
+
+    
+</body>
+</html>

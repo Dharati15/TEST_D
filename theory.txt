@@ -1,0 +1,16 @@
+
+1) When the one veriable have multiple properties at that time can use key and value paris to add that property.
+   ex: var person {
+                    name:dharati
+                    age : 22
+                    present: yes
+                  }
+
+2) Loops are used to performe repeated taskes based on a condition. conditions returns true or false.
+
+3) When we want to use condition at that time we can use branching. we can do branching with switch   
+   operator and we can use turnory operator behalf of if else.
+
+4) The array.foreach() method returns the undefined.
+
+5) The array.find() method returns undefined or element. 
